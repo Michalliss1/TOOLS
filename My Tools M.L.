@@ -9,10 +9,10 @@ które odpowiada na określone zapytania NetBIOS na podstawie żądania serwera 
 
 responder -i eth0
 
-CRACKMAPEXEC:
+CRACKMAPEXEC: 
 CredCrack   zbieracz danych uwierzytelniających. Eksfiltruje poświadczenia w sposób rekurencyjny w pamięci iw sposób wyraźny. 
-Po zakończeniu CredCrack przeanalizuje i wyśle poświadczenia,
-identyfikując uzyskanych administratorów domeny. CredCrack ma również możliwość wyświetlania i wyliczania dostępu do udziałów i tak, jest wielowątkowy!
+Po zakończeniu CredCrack przeanalizuje i wyśle poświadczenia, identyfikując uzyskanych administratorów domeny. CredCrack ma również możliwość
+wyświetlania i wyliczania dostępu do udziałów , jest wielowątkowy.
 
 np: crackmapexec smb ip -u 'user' -p 'pasword'   wylicza smb
 crackmapex smb ip -u user.txt -p pass.txt  --continue-on-success | grep '[+] brutforsuje smb z plikow 
@@ -47,6 +47,8 @@ GOBUSTER: Identyfikatory URI (katalogi i pliki) w witrynach internetowych. Subdo
 gobuster dir -u ip  -w  /usr/share/wordlists/dirb/big.txt
   /usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt -x php.html.txt
 gobuster vhost -u http://ip -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt   SUBDOMENY
+
+FFUF :  ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://ip -fs 2395
 
 WPSCAN:WPScan skanuje zdalne instalacje WordPressa, aby znaleźć problemy z bezpieczeństwem
 wpscan --url http://ip/blog --usernames admin --passwords /usr/share/wordlists/rockyou.txt  --max-threads 50
