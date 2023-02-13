@@ -21,7 +21,7 @@ crackmapexec ssh    to samo tylko ssh
 
 
 
-CEWL: Przeszukuje dany adres URL do określonej głębokości i zwraca listę słów, które można następnie wykorzystać do łamania haseł.
+CEWL: Przeszukuje dany adres URL do określonej głębokości i zwraca listę słów, które można następnie wykorzystać do stworzenia słownika , w celu łamania haseł.
 
 cewl -d 2 -m 5 -w list.txt   URL
 
