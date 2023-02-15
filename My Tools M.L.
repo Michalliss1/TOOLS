@@ -19,6 +19,17 @@ crackmapex smb ip -u user.txt -p pass.txt  --continue-on-success | grep '[+] bru
 crackmapexec ip/24  -u user.txt -p pass.txt  --continue-on-success | grep '[+]   szuka po calej sieci
 crackmapexec ssh    to samo tylko ssh
 
+C2
+COVENANT
+EMPIRE:jest to platforma dopost-eksploatacji, która ejst używana jako pomoc dla red teamu i testów penetracyjnych. Agenci: PowerShell Python 3 C# IronPython 3
+Różne mechanizmy C2, takie jak OneDrive, Dropbox, php, http/s i profile Malleable. 
+sudo apt install powershell-empire starkiller
+sudo powershell-empire server   utworzy server na localhost na danym porcie np 1337
+powershell-empire client
+Możemy uruchomić starkiller   "starkiller"
+Wchodzimy na https://localhost:1337  ustawiamy hasło i login 
+
+
 
 
 CEWL: Przeszukuje dany adres URL do określonej głębokości i zwraca listę słów, które można następnie wykorzystać do stworzenia słownika , w celu łamania haseł.
@@ -90,7 +101,8 @@ exiftool IMAGE_NAME
 Można dodac np. do "comment" payload <?php echo "<pre>Test Payload</pre>"; die();?> Używamy jezeli możemy uploadować tylko obrazy.
 exiftool -Comment="<?php echo \"<pre>Test Payload</pre>\"; die(); ?>" IMAGE_NAME.jpeg.php
 
-
+SEATBELT: to projekt w języku C#, który przeprowadza szereg zorientowanych na bezpieczeństwo „kontroli bezpieczeństwa” hosta, 
+istotnych zarówno z ofensywnych, jak i defensywnych perspektyw bezpieczeństwa.
 
 
 
