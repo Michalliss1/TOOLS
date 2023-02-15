@@ -72,6 +72,23 @@ SEARCHSPLOIT:
 searchsploit  nazwa exploit 
 serachsploit -m nazwa exploit      - pobieranie
 
+GCC: kompilator 
+gcc source.c -o outfile
+
+MCS MONO :kompilator c# exe     
+sudo apt install mono-devel
+mcs script.cs     ->   script.exe   
+
+SMB SERVER.PY
+smbserver.py share . -smb2support -username user -password haslo
+
+PYTHON SERVER:
+python3 -m http.server port
+
+EXIFTOOL: używany do odczytywania i zapisywania metainformacji w plikach graficznych, audio i wideo.
+exiftool IMAGE_NAME
+Można dodac np. do "comment" payload <?php echo "<pre>Test Payload</pre>"; die();?> Używamy jezeli możemy uploadować tylko obrazy.
+exiftool -Comment="<?php echo \"<pre>Test Payload</pre>\"; die(); ?>" IMAGE_NAME.jpeg.php
 
 
 
