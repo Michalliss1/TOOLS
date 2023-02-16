@@ -1,3 +1,6 @@
+LOOKUPSID.PY:przeprowadza brutalne wymuszanie identyfikatorów SID systemu Windows w celu identyfikacji użytkowników/grup w zdalnym miejscu docelowym.
+lookupsid.py guest@ip
+
 PSPY64:
 pspy to narzędzie wiersza poleceń przeznaczone do szpiegowania procesów bez konieczności posiadania uprawnień administratora. 
 Pozwala zobaczyć polecenia wykonywane przez innych użytkowników, zadania cron itp. Podczas ich wykonywania. Doskonały do wyliczania systemów Linux w CTF
@@ -35,7 +38,8 @@ Wchodzimy na https://localhost:1337  ustawiamy hasło i login
 
 
 
-CEWL: Przeszukuje dany adres URL do określonej głębokości i zwraca listę słów, które można następnie wykorzystać do stworzenia słownika , w celu łamania haseł.
+CEWL: 
+Przeszukuje dany adres URL do określonej głębokości i zwraca listę słów, które można następnie wykorzystać do stworzenia słownika , w celu łamania haseł.
 
 cewl -d 2 -m 5 -w list.txt   URL
 
@@ -56,7 +60,8 @@ nmap -sC -sV -p- ip
 -A    -o    --script""  -T5  //   i inne w zależności od potrzeb skanwoania.
 https://www.tutorialspoint.com/nmap-cheat-sheet
 
-GOBUSTER: Identyfikatory URI (katalogi i pliki) w witrynach internetowych. Subdomeny DNS (z obsługą symboli wieloznacznych). Wirtualne nazwy hostów na docelowych serwerach WWW.
+GOBUSTER: 
+Identyfikatory URI (katalogi i pliki) w witrynach internetowych. Subdomeny DNS (z obsługą symboli wieloznacznych). Wirtualne nazwy hostów na docelowych serwerach WWW.
 
 gobuster dir -u ip  -w  /usr/share/wordlists/dirb/big.txt
   /usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt -x php.html.txt
@@ -64,7 +69,8 @@ gobuster vhost -u http://ip -w /usr/share/wordlists/SecLists/Discovery/DNS/subdo
 
 FFUF :  ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://ip -fs 2395
 
-WPSCAN:WPScan skanuje zdalne instalacje WordPressa, aby znaleźć problemy z bezpieczeństwem
+WPSCAN:
+WPScan skanuje zdalne instalacje WordPressa, aby znaleźć problemy z bezpieczeństwem
 wpscan --url http://ip/blog --usernames admin --passwords /usr/share/wordlists/rockyou.txt  --max-threads 50
 Wpsacn –-url url -e u vp
 WPSCAN BRUTEFORSE:Wpsacn –-url url -p pass.txt -u admin
