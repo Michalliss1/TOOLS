@@ -1,3 +1,7 @@
+GETNPUSERS.PY:spróbuje zebrać odpowiedzi AS_REP bez wcześniejszego uwierzytelnienia dla danej listy nazw użytkowników. 
+Odpowiedzi te zostaną zaszyfrowane hasłem użytkownika, które następnie można złamać w trybie offline
+python3.9 GetNPUsers.py domain/ -usersfile users.txt -dc-ip ip -outputfile hash.txt
+
 LOOKUPSID.PY:przeprowadza brutalne wymuszanie identyfikatorów SID systemu Windows w celu identyfikacji użytkowników/grup w zdalnym miejscu docelowym.
 lookupsid.py guest@ip
 
