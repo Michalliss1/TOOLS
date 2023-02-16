@@ -126,6 +126,15 @@ exiftool -Comment="<?php echo \"<pre>Test Payload</pre>\"; die(); ?>" IMAGE_NAME
 SEATBELT: to projekt w języku C#, który przeprowadza szereg zorientowanych na bezpieczeństwo „kontroli bezpieczeństwa” hosta, 
 istotnych zarówno z ofensywnych, jak i defensywnych perspektyw bezpieczeństwa.
 
+Następujące polecenie wysyła zapytanie do rejestru na głębokość trzech poziomów, zwracając tylko klucze/nazwy wartości/wartości pasujące do wyrażenia
+regularnego .*defini.*i ignorując wszelkie występujące błędy.
+Seatbelt.exe "reg \"HKLM\SOFTWARE\Microsoft\Windows Defender\" 3 .*defini.* true"   
+
+Następujące polecenie zwraca 4624 zdarzeń logowania z ostatnich 30 dni:
+Seatbelt.exe "LogonEvents 30"
+
+Aby wyliczyć zdalny system, podaj -computername=COMPUTER.DOMAIN.COM- można określić alternatywną nazwę użytkownika i hasło-username=DOMAIN\USER -password=PASSWORD
+Seatbelt.exe -group=remote -computername=192.168.230.209 -username=THESHIRE\sam -password="yum \"po-ta-toes\""
 
 
 OBRACANIE/PIVOTING:
