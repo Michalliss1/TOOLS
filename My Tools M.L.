@@ -68,6 +68,16 @@ nmap -sC -sV -p- ip
 -A    -o    --script""  -T5  //   i inne w zależności od potrzeb skanwoania.
 https://www.tutorialspoint.com/nmap-cheat-sheet
 
+NIKTO:Nikto to skaner serwerów sieciowych 
+https://cirt.net/Nikto2
+nikto -host URL/ -output file.txt
+
+
+nslookup URL
+host URL
+dig URL any
+
+
 GOBUSTER: 
 Identyfikatory URI (katalogi i pliki) w witrynach internetowych. Subdomeny DNS (z obsługą symboli wieloznacznych). Wirtualne nazwy hostów na docelowych serwerach WWW.
 
