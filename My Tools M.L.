@@ -77,6 +77,8 @@ nslookup URL
 host URL
 dig URL any
 
+enum4linux/enum.exe:Enum4linux to narzędzie do wyliczania informacji z systemów Windows i Samba
+enum4linux -U -o ip
 
 GOBUSTER: 
 Identyfikatory URI (katalogi i pliki) w witrynach internetowych. Subdomeny DNS (z obsługą symboli wieloznacznych). Wirtualne nazwy hostów na docelowych serwerach WWW.
@@ -170,7 +172,6 @@ chisel client ipZaatakwoanejMaszyny:4444 4455:socks
 
 Po tym Możemy uzyc proxychains przez port  4455
  
-
 
 
 
