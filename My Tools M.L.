@@ -59,6 +59,8 @@ https://redis.io/commands/info/
 SECRETSDUMP.PY: wykona różne techniki zrzutu tajemnic ze zdalnej maszyny bez uruchamiania żadnego agenta. Techniki obejmują odczytywanie tajemnic SAM i LSA z
 rejestrów, zrzucanie skrótów NTLM, poświadczeń w postaci zwykłego tekstu i kluczy Kerberos oraz zrzucanie NTDS.dit
 python3.9 secretsdump.py domainname/username:"password"@ip
+python3.9 secretsdump.py -ntds ntds.dit -system system.hive LOCAL > secret.txt
+
 
 PSPY64:
 pspy to narzędzie wiersza poleceń przeznaczone do szpiegowania procesów bez konieczności posiadania uprawnień administratora. 
