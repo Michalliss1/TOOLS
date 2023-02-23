@@ -123,6 +123,9 @@ LINPEAS/WINPEAS
 Linux local Privilege Escalation Awesome Script (linPEAS) to skrypt, który wyszukuje możliwe ścieżki do eskalacji uprawnień na hostach Linux/Unix
 WINPEAS dla windowsa.
 
+PowerUp.ps1:umożliwia użytkownikowi szybkie sprawdzenie komputera z systemem Windows pod kątem możliwości eskalacji uprawnień
+import-module .\PowerUp.ps1
+
 NMAP: skaner sieci 
 nmap -sC -sV -p- ip 
 -A    -o    --script""  -T5  //   i inne w zależności od potrzeb skanwoania.
