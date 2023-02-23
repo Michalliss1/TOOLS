@@ -125,6 +125,7 @@ WINPEAS dla windowsa.
 
 PowerUp.ps1:umożliwia użytkownikowi szybkie sprawdzenie komputera z systemem Windows pod kątem możliwości eskalacji uprawnień
 import-module .\PowerUp.ps1
+Invoke-AllChecks
 
 NMAP: skaner sieci 
 nmap -sC -sV -p- ip 
