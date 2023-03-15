@@ -197,6 +197,11 @@ smbserver.py share . -smb2support -username user -password haslo
 PYTHON SERVER:
 python3 -m http.server port
 
+XXD  hex editor
+xxd thm.jpg | head -n 30
+
+hexedit thm.jpg 
+
 EXIFTOOL: używany do odczytywania i zapisywania metainformacji w plikach graficznych, audio i wideo.
 exiftool IMAGE_NAME
 Można dodac np. do "comment" payload <?php echo "<pre>Test Payload</pre>"; die();?> Używamy jezeli możemy uploadować tylko obrazy.
