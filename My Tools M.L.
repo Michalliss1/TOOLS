@@ -132,6 +132,8 @@ nmap -sC -sV -p- ip
 -A    -o    --script""  -T5  //   i inne w zależności od potrzeb skanwoania.
 https://www.tutorialspoint.com/nmap-cheat-sheet
 
+NESSUS: skaner podatności
+
 NIKTO:Nikto to skaner serwerów sieciowych 
 https://cirt.net/Nikto2
 nikto -host URL/ -output file.txt
