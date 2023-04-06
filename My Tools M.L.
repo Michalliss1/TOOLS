@@ -258,4 +258,5 @@ sqlmap -u http://ip --form -D users -T users --dump dampuje hasla i username   t
 arjun -u url
 Ten pakiet może znaleźć parametry zapytania dla punktów końcowych adresów URL.
 
+csrf-poc-generator  firefox index.html
 
