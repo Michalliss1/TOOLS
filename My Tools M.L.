@@ -156,6 +156,7 @@ gobuster vhost -u http://ip -w /usr/share/wordlists/SecLists/Discovery/DNS/subdo
 FFUF :  ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://ip -fs 2395
 Subdomain wfuzz
 wfuzz -c -z file,/usr/share/dirb/wordlists/domain/subdomains-top1million-5000.txt -u "url" -H "Host: FUZZ.nahamstore.thm" --hw 65
+ffuf -u http://nahamstore.thm/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
 
 WPSCAN:
 WPScan skanuje zdalne instalacje WordPressa, aby znaleźć problemy z bezpieczeństwem
