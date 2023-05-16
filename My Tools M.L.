@@ -1,15 +1,5 @@
-BURP SUITE: Nażędzie służące do testów penetracyjnych aplikacji internetowych.
-1. Spider:przeszukiwacz sieciowy używany do mapowania docelowej aplikacji internetowej  2. Proxy:zawiera przechwytujące proxy  3. Intruder:Brute Force 4. Repeater:Sprawdzanie, czy wartości podane przez użytkownika są weryfikowane.
-5. Sequencer:sprawdza losowość tokenów generowanych przez serwer WWW 6. Decoder 7. Extender 8. Scanner
 
-WIRESHARK:  analizator protokołów sieciowych
-https://www.wireshark.org/
-
-ETTERCAP: kompleksowy pakiet do ataków typu „man in the middle”(podszywanie się za jedną ze stron).Informacje uzyskane podczas ataku mogą zostać wykorzystane do wielu celów, w tym do kradzieży tożsamości, 
-niezatwierdzonych transferów środków lub nielegalnej zmiany hasła.
-Do analizy ruchu i identyfikacji możemy użyć WIRESHARKA.
-
-MIMIKATZ:która umożliwia użytkownikom przeglądanie i zapisywanie poświadczeń uwierzytelniających, takich jak bilety Kerberos
+MIMIKATZ:która umożliwia użytkownikom przeglądanie i zapisywanie poświadczeń uwierzytelniających, np takich jak bilety Kerberos
 https://www.varonis.com/blog/what-is-mimikatz
 privilege::debug
 token::elevate
@@ -102,6 +92,19 @@ sudo powershell-empire server   utworzy server na localhost na danym porcie np 1
 powershell-empire client
 Możemy uruchomić starkiller   "starkiller"
 Wchodzimy na https://localhost:1337  ustawiamy hasło i login 
+
+
+BURP SUITE: Nażędzie służące do testów penetracyjnych aplikacji internetowych.
+1. Spider:przeszukiwacz sieciowy używany do mapowania docelowej aplikacji internetowej  2. Proxy:zawiera przechwytujące proxy  3. Intruder:Brute Force 4. Repeater:Sprawdzanie, czy wartości podane przez użytkownika są weryfikowane.
+5. Sequencer:sprawdza losowość tokenów generowanych przez serwer WWW 6. Decoder 7. Extender 8. Scanner
+
+WIRESHARK:  analizator protokołów sieciowych
+https://www.wireshark.org/
+
+ETTERCAP: kompleksowy pakiet do ataków typu „man in the middle”(podszywanie się za jedną ze stron).Informacje uzyskane podczas ataku mogą zostać wykorzystane do wielu celów, w tym do kradzieży tożsamości, 
+niezatwierdzonych transferów środków lub nielegalnej zmiany hasła.
+Do analizy ruchu i identyfikacji możemy użyć WIRESHARKA.
+
 
 
 
@@ -262,4 +265,6 @@ arjun -u url
 Ten pakiet może znaleźć parametry zapytania dla punktów końcowych adresów URL.
 
 csrf-poc-generator  firefox index.html
+
+
 
